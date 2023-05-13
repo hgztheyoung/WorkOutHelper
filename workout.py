@@ -189,8 +189,12 @@ for e in split3_training_pain:
             while len(sl) < len(l):
                 l = [select_one_move_by_type(m) for m in move]
                 sl = set(l)
-            print(f'''{move}:{[select_one_move_by_type(m) for m in move]}''')
-    print('--------------------------------')
+            print(f'''{move}:{l} 组数：{
+            p['组数']
+            }''')
+            print({m: move_details[m] for m in move})
+        print('     动作分割线--------------------------------')
+    print('训练日分割线--------------------------------')
 # 组间休息：胸背腿 3 肩手2 腿4
 
 # 每组8个，做到力竭
